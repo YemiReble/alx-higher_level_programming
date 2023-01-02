@@ -30,7 +30,7 @@
 * The first line of each shell file starts with #!/bin/bash
 * All shell files are executable
 
-# C Scripts
+## C Scripts
 * All files were compiled on Ubuntu 20.04 LTS using gcc, using the options ```-Wall -Werror -Wextra -pedantic -std=gnu89```
 * All files end with a new line
 * C Code uses the Betty style. It can be checked using ```betty-style.pl``` and ```betty-doc.pl```
@@ -38,7 +38,8 @@
 * No more than 5 functions per file
 * The prototypes of all your functions is included in the header files.
 
-# Zen
+## Zen
+```
 	The Zen of Python, by Tim Peters
 
 	Beautiful is better than ugly.
@@ -60,3 +61,4 @@
 	If the implementation is hard to explain, it's a bad idea.
 	If the implementation is easy to explain, it may be a good idea.
 	Namespaces are one honking great idea -- let's do more of those!
+```
