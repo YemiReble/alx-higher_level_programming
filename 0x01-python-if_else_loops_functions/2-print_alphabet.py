@@ -1,4 +1,5 @@
 #!/usr/bin/python3
-import string
-for letter in string.ascii_lowercase:
-    print(letter, end="")
+for letter_code in range(ord('a'), ord('z')+1):
+    letter = chr(letter_code)
+    if letter not in "qe":
+        print(letter, end="")
