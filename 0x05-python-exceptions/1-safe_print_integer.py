@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 def safe_print_integer(value):
     try:
-        if value <= 100:
-            print("{:d}".format(value))
+        print("{:d}".format(value))
         return True
 
-    except TypeError:
+    except (TypeError, ValueError):
         return False
