@@ -4,6 +4,4 @@
 
 def lookup(obj):
     """Function that lookup the methon of an object"""
-
-    list = dir(obj)
-    return list
+    return dir(obj)
