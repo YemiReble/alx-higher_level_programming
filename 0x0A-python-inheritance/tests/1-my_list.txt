@@ -62,4 +62,16 @@ Test case to check negative numbers
 [-18, -3, -2, 1, 5, 31]
 >>>
 
+---------------------------------------------
+
+Test case list with unknown attribute
+
+>>> my_list = [1, 2, 3]
+>>> my_list.print_sorted()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'list' object has no attribute 'print_sorted'
+>>>
+
+
 End all test case.
