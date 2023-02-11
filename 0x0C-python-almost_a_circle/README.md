@@ -29,7 +29,6 @@ In this project, you will review everything about Python:
 - [x] unittest module
 - [x] Python test cheatsheet
 - [x] Learning Objectives
-- [x] At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 
 ## General
 * What is Unit testing and how to implement it in a large project
