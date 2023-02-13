@@ -13,7 +13,3 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
-
-    class Rectangle(Base):
-        """ A class that inherits from Base"""
-
