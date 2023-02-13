@@ -1,0 +1,3 @@
+#!/bin/bash
+chmod u+x models/*.py && pycodestyle models/*.py
+chmod u+x *.py
