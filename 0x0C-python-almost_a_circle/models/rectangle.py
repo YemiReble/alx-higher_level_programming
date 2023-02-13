@@ -91,3 +91,19 @@ class Rectangle(Base):
     def area(self):
         """ A Public method that retuns the area of a rectangle"""
         return (self.__width * self.__height)
+
+    def display(self):
+        """ Another public method that prints a regtangle with # sign"""
+        for y in range(self.__y):
+            print("")
+        for row in range(self.__height):
+            for x in range(self.__x):
+                print(" ", end="")
+            for column in range(self.__width):
+                print("#", end="")
+            print()
+
+    def __str__(self):
+        """A method that does some calculations"""
+        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} -\
+{self.__width}/{self.__height}"
