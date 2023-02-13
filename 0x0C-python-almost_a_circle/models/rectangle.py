@@ -106,7 +106,7 @@ class Rectangle(Base):
     def __str__(self):
         """A method that does some calculations"""
         return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} -\
-{self.__width}/{self.__height}"
+ {self.__width}/{self.__height}"
 
     def update(self, *args, **kwargs):
         """A Public method that assign an argument to all attributes."""
