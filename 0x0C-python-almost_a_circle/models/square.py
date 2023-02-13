@@ -13,12 +13,12 @@ class Square(Rectangle):
         self.__size = size
         self.__x = x
         self.__y = y
-        self.__id = None
+        self.id = None
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
         """Defines a format for the string representation of the class"""
-        return f"[Square] ({self.id}) {self.x}/{self.y} - {self.size}"
+        return f"[Square] ({self.id}) {self.__x}/{self.__y} - {self.__size}"
 
     """Setter and Getter"""
     @property
@@ -48,7 +48,7 @@ class Square(Rectangle):
         self.__width = value
         self.__height = value
 
-    def update(self, *args, **kwargs)
+    def update(self, *args, **kwargs):
         """A public method that assign attributes"""
         if args is not None and len(args) != 0:
             if len(args) >= 1:
@@ -56,11 +56,11 @@ class Square(Rectangle):
                     raise TypeError("id must be an integer")
                 self.id = args[0]
             if len(args) > 1:
-                self.size = args[1]
+                self.__size = args[1]
             if len(args) > 2:
-                self.x = args[2]
+                self.__x = args[2]
             if len(args) > 3:
-                self.y = args[3]
+                self.__y = args[3]
         else:
             for key, value in kwargs.items():
                 if key == "id":
@@ -68,16 +68,16 @@ class Square(Rectangle):
                         raise TypeError("id must be an integer")
                     self.id = value
                 if key == "size":
-                    self.size = value
+                    self.__size = value
                 if key == "x":
-                    self.x = value
+                    self.__x = value
                 if key == "y":
-                    self.y = value
+                    self.__y = value
 
     def to_dictionary(self):
         """Returns the dictionary representation of a Square"""
 
-        obj_dictionary = {'id': self.id, 'size': self.size, 'x': self.x,
-                          'y': self.y}
+        obj_dictionary = {'id': self.id, 'size': self.__size, 'x': self.__x,
+                          'y': self.__y}
 
         return obj_dictionary
