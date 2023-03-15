@@ -25,6 +25,16 @@
 * What are subqueries
 * How to use MySQL functions
 
+### Command That Runs MySql File On Linux
+```
+cat file_name.sql | mysql -hlocalhost -uroot -p
+```
+
+### Command That Runs MySql File With An Arg
+```
+cat file_name.sql | mysql -hlocalhost -uroot -p mysql
+```
+
 ## More Info
 ### Comments for your SQL file:
 ```
