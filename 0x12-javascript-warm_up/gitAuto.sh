@@ -14,6 +14,7 @@
 # ./gitAuto.sh file1 file2 file3 and so on is not acceptable
 # arg1 = "$1"
 # arg2 = "$2"
+# Copyright of YemiDev
 # ============================================================
 
 
