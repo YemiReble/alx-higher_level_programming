@@ -20,5 +20,5 @@ if __name__ == "__main__":
         cities.state_id=states.id WHERE states.name LIKE BINARY\
         %(states_name)s ORDER BY cities.id ASC", {'state_name': argv[4]})
     new_var = cur.fetchall()
-    for row in new_var:
-        print(row)
+    if new_var is not None:
+        print(", ".join(row[1] for row in new_var))
