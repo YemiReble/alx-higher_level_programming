@@ -16,9 +16,9 @@ if __name__ == "__main__":
     db = MySQLdb.connect(
         host="localhost", user=argv[1], port=3306, passwd=argv[2], db=argv[3])
     # cur = db.cursor()
-    with db.cursor() as cur: 
-    # Found this out after 2 hours of debugging
-    # But still not the problem :(
+    with db.cursor() as cur:
+        # Found this out after 2 hours of debugging
+        # But still not the problem :(
         cur.execute("SELECT cities.id, cities.name FROM cities JOIN states ON\
             cities.state_id=states.id WHERE states.name LIKE BINARY\
             %(states_name)s ORDER BY cities.id ASC", {'states_name': argv[4]})
