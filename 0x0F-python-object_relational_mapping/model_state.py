@@ -18,12 +18,12 @@ Base = declarative_base()
 
 class State(Base):
 
-    __table_name__ = 'states'
+    __tablename__ = 'states'
     id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
     name = Column(String(128), nullable=False)
 
     # Establishing connection to the local-host
-    engine = create_engine('mysql://localhost:3306')
+    # engine = create_engine('mysql://localhost:3306')
 
     # Import all class that inherits from base
-    Base.metadata.create_all(engine)
+    # Base.metadata.create_all(engine)
