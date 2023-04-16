@@ -16,7 +16,14 @@ Base = declarative_base()
 
 
 class State(Base):
+    """
+    Class - Table Attributes:
+    id: (int)   Takes in or count the table row
+    name: (str) A column that takes In the names
+                of states in the table.
+    """
 
     __tablename__ = 'states'
-    id = Column(Integer, primary_key=True, nullable=False)
+
+    id = Column(Integer, primary_key=True)
     name = Column(String(128), nullable=False)
