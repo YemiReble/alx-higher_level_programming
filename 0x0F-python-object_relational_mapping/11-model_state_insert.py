@@ -30,10 +30,10 @@ if __name__ == "__main__":
 
     # Creating New State
     new_state = State(name="Louisiana")
-    
+
     # Adding the New State and commition the transaction
     session.add(new_state)
     session.commit()
-    
+
     print('{}'.format(new_state.id))
     session.close()
