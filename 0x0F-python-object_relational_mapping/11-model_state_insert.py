@@ -17,7 +17,7 @@ from model_state import Base, State
 if __name__ == "__name__":
     """
     Establishing connection to databese and creating
-    a connection session to fetch data.
+    a connection session to create new data.
     """
 
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
