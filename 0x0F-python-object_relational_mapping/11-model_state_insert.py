@@ -3,7 +3,7 @@
 This is a python script that add a Data to
 a Table in a DataBase.
 ==========================================
-Write a script that adds the State object
+A script that adds the State object
 “Louisiana” to the database hbtn_0e_6_usa
 """
 
@@ -14,7 +14,7 @@ from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 
 
-if __name__ == "__name__":
+if __name__ == "__main__":
     """
     Establishing connection to databese and creating
     a connection session to create new data.
@@ -30,8 +30,10 @@ if __name__ == "__name__":
 
     # Creating New State
     new_state = State(name="Louisiana")
+    
     # Adding the New State and commition the transaction
     session.add(new_state)
     session.commit()
+    
     print('{}'.format(new_state.id))
     session.close()
