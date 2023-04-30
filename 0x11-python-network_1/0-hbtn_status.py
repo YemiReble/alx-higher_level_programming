@@ -7,7 +7,7 @@ using <pipe> filename.py | cat -e
 
 import urllib.request
 
-url = urllib.request.Request("https://alx-intranet.hbtn.io/status")
+url = "https://alx-intranet.hbtn.io/status"
 with urllib.request.urlopen(url) as response:
     res = response.read()
     print("Body response:")
