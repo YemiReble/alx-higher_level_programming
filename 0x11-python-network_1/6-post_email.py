@@ -6,7 +6,7 @@ and finally displays the body of the response.
 """
 
 import sys
-import request
+import requests
 
 if __name__ == "__main__":
     url = sys.argv[1]
