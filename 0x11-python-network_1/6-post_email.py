@@ -10,8 +10,9 @@ import requests
 
 if __name__ == "__main__":
     url = sys.argv[1]
+    email = sys.argv[2]
 
-    inst = {"email": sys.agrv[2]}
+    inst = {"email": email}
     resp = requests.post(url, data=inst)
 
     print(resp.text)
