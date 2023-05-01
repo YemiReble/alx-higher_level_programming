@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """
 This is a python script that request from a url and
 displays the value of the variable X-Request-Id
