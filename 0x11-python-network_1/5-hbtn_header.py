@@ -11,6 +11,5 @@ import sys
 if __name__ == "__main__":
     url = sys.argv[1]
 
-    headers = {X-Request-Id: '123'}
-    data = requests.get(url, headers=headers)
-    print(data.content)
+    data = requests.get(url)
+    print(data.headers.get('X-Request-Id'))
