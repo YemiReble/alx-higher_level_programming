@@ -10,12 +10,13 @@ import sys
 import requests
 
 
-if __name__ == "__main___":
+if __name__ == "__main__":
+
     url = sys.argv[1]
 
-    data = requests.get(url)
+    resp = requests.get(url)
 
-    if data.status_code >= 400:
-        print("Error code: {}".format(data.status_code))
+    if resp.status_code >= 400:
+        print("Error code: {}".format(resp.status_code))
     else:
-        print(data.text)
+        print(resp.text)
