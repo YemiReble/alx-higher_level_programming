@@ -4,7 +4,8 @@ This is a python script that uses urllib.error.HTTPError
 to manage HTTP status exceptions
 """
 
-import urllib
+import urllib.request
+import urllib.error
 import sys
 
 if __name__ == "__main__":
