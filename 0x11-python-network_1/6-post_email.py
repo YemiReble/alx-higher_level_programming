@@ -15,4 +15,4 @@ if __name__ == "__main__":
     inst = {'email': email}
     resp = requests.get(url, data=inst)
 
-    print(resp.content)
+    print(resp.text)
