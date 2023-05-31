@@ -30,4 +30,11 @@
 * How to listen/bind to DOM events
 * How to listen/bind to user events
 
+## Import JQuery
+```JS
+<head>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+```
+
 Have fun looking around
