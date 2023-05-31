@@ -1,4 +1,4 @@
-// Using the JQuery API to colour the header tag
+#!/usr/bin/node
 
 $(document).ready(function () {
   $('header').css('color', 'red');
