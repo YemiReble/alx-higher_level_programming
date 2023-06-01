@@ -1,0 +1,80 @@
+"Configuring my VIM and VI editor"
+
+"Here, the size of a tab character in Vim is set to 8, so Vim will display 8
+"spaces on your screen to represent a single tab. You can modify this value,
+"to put a smaller one if you want, but just keep in mind that it's a good
+"habit to keep an indentation of 8 columns: it makes your code more readable.
+"
+"set tabstop=8 shiftwidth=8
+
+"To indent automatically a line depending on the previous one when you hit
+"Enter
+"set autoindent
+
+
+"Using ntelligent indentation for C code with Vim:
+set smartindent
+"set cindent
+"set noexpandtab
+"set tabstop=4 with this
+"set shiftwidth=4 also this
+
+
+"Enabling syntax highlighting
+syntax enable
+
+"Display line numbers of the current line and column
+set number
+
+"end of commands for C configuration...
+
+"------------------------------------------------------------------------
+
+" configure expanding of tabs for various file types
+au BufRead,BufNewFile *.py set expandtab
+au BufRead,BufNewFile *.c set expandtab
+au BufRead,BufNewFile *.h set expandtab
+au BufRead,BufNewFile Makefile* set noexpandtab
+
+" --------------------------------------------------------------------------------
+" configure editor with tabs and nice stuff...
+" --------------------------------------------------------------------------------
+set expandtab           " enter spaces when tab is pressed
+set textwidth=120       " break lines when line length increases
+set tabstop=4           " use 4 spaces to represent tab
+set softtabstop=4
+set shiftwidth=4        " number of spaces to use for auto indent
+set autoindent          " copy indent from current line when starting a new line
+
+" make backspaces more powerfull
+set backspace=indent,eol,start
+set ruler               " show line and column number
+syntax on               " syntax highlighting
+set showcmd             " show (partial) command in status line
+
+"----------------------------------------------------------------------------------
+"Installing syntastic with Pathogen
+"https://github.com/vim-syntastic/syntastic
+execute pathogen#infect()
+
+"More fetures
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+
+
+"JavaScript Configuration
+"Semi-Standard - for JavaScript code check
+"https://github.com/standard/semistandard
+let g:syntastic_javascript_checkers=['standard']
+let g:syntastic_javascript_standard_exec = 'semistandard'
+
+"For automatic formatting on save
+autocmd bufwritepost *.js silent !semistandard % --fix
+set autoread
